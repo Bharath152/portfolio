@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portfolio</title>
+<title>Portfolio — S.Padmanabhan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Zodiak:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -78,8 +78,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .stitle span{color:var(--muted)}
 
 .elist{display:flex;flex-direction:column;gap:16px}
-.ecard{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);padding:36px 40px;display:grid;grid-template-columns:1fr auto;gap:24px;transition:border-color .3s,background .3s,transform .3s;opacity:1;transform:translateY(0)}
-.ecard.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease,border-color .3s,background .3s}
+.ecard{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);padding:36px 40px;display:grid;grid-template-columns:1fr auto;gap:24px;transition:border-color .3s,background .3s,transform .3s}
 .ecard:hover{border-color:rgba(168,85,247,.4);background:rgba(255,255,255,.055);transform:translateY(-4px)}
 .ebadge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.38);border-radius:7px;padding:4px 12px;font-size:.63rem;font-weight:700;letter-spacing:.14em;color:#c4b5fd;margin-bottom:10px;text-transform:uppercase;width:fit-content}
 .erole{font-size:1.15rem;font-weight:800;margin-bottom:14px}
@@ -91,13 +90,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .et{background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.28);color:#67e8f9;border-radius:6px;padding:4px 12px;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
-.pcard{background:var(--glass);backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transform-style:preserve-3d;transition:border-color .3s;opacity:1;transform:translateY(0)}
-.pcard.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease,border-color .3s}
+.pcard{background:var(--glass);backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;cursor:pointer;transform-style:preserve-3d;transition:border-color .3s}
 .pcard:hover{border-color:rgba(168,85,247,.45)}
 .pthumb{height:210px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.ptgrad{position:absolute;inset:0}
 .ptover{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(6,8,15,.97))}
-.ptico{font-size:3.4rem;position:relative;z-index:1;filter:drop-shadow(0 0 28px currentColor);opacity:.65}
 .pttag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .pbody{padding:22px 24px 26px}
 .pcat{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(90deg,var(--v2),var(--c1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
@@ -107,12 +103,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .pstack{display:flex;flex-wrap:wrap;gap:5px}
 .sb{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.22);color:#6ee7b7;border-radius:5px;padding:3px 9px;font-size:.61rem;font-weight:600;letter-spacing:.07em}
 .plinks{display:flex;gap:8px}
+/* FIX: .pl-disabled looks like a button but does nothing and shows a tooltip */
 .pl{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:8px;padding:7px 13px;font-size:.7rem;color:var(--muted);text-decoration:none;transition:color .2s,border-color .2s,background .2s}
 .pl:hover{color:#c4b5fd;border-color:rgba(168,85,247,.45);background:rgba(168,85,247,.1)}
+.pl-disabled{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;padding:7px 13px;font-size:.7rem;color:rgba(136,150,179,.35);cursor:not-allowed;position:relative}
+.pl-disabled:hover::after{content:'No link yet';position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#1a1f35;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:.64rem;white-space:nowrap;color:var(--muted);pointer-events:none}
 
 .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
-.sgroup{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);padding:28px;transition:border-color .3s,transform .3s;opacity:1;transform:translateY(0)}
-.sgroup.in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease,border-color .3s,transform .3s}
+.sgroup{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);padding:28px;transition:border-color .3s,transform .3s}
 .sgroup:hover{border-color:rgba(6,182,212,.32);transform:translateY(-4px)}
 .sghead{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
 .sgico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
@@ -120,30 +118,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:6px 13px;font-size:.74rem;font-weight:500;color:var(--muted);transition:background .2s,border-color .2s,color .2s,transform .15s;cursor:default}
 .chip:hover{background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.45);color:#e2d9ff;transform:scale(1.04)}
 
-/* ── CERTIFICATES (PERMANENT FILE-PATH) ── */
+/* CERTIFICATES */
 .certgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-.certcard{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:border-color .3s,transform .3s;opacity:1;transform:translateY(0)}
-.certcard.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease,border-color .3s,transform .3s}
+.certcard{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:border-color .3s,transform .3s}
 .certcard:hover{border-color:rgba(168,85,247,.4);transform:translateY(-5px)}
 .certimg-wrap{position:relative;height:200px;overflow:hidden;cursor:zoom-in;background:#0d1120}
 .certimg{width:100%;height:200px;object-fit:cover;display:block;transition:transform .4s}
 .certcard:hover .certimg{transform:scale(1.05)}
 .certimg-hover{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .3s}
 .certimg-wrap:hover .certimg-hover{opacity:1}
-.certimg-missing{width:100%;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(124,58,237,.07);border-bottom:1px solid var(--border)}
-.certimg-missing span{font-size:.72rem;color:var(--muted);text-align:center;padding:0 20px;line-height:1.6}
 .certbody{padding:20px 22px 24px}
 .certbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.28);border-radius:6px;padding:3px 10px;font-size:.62rem;font-weight:700;letter-spacing:.12em;color:#6ee7b7;margin-bottom:10px;text-transform:uppercase}
 .certtitle{font-size:1rem;font-weight:800;margin-bottom:5px;line-height:1.3}
-.certmeta{font-size:.72rem;color:var(--muted);font-weight:600;margin-bottom:8px}
-.certdesc{font-size:.78rem;color:var(--muted);line-height:1.65;font-weight:400}
+.certmeta{font-size:.72rem;color:var(--muted);font-weight:600}
 
 /* LIGHTBOX */
 #certlightbox{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.92);backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+#certlightbox.open{display:flex}
 #certlightbox-img{max-width:90vw;max-height:88vh;border-radius:16px;box-shadow:0 40px 100px rgba(0,0,0,.8);border:1px solid rgba(168,85,247,.35)}
 .lb-close{position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:2.6rem;cursor:pointer;line-height:1;opacity:.7;transition:opacity .2s}
 .lb-close:hover{opacity:1}
 
+/* CONTACT */
 .cwrap{background:var(--glass);backdrop-filter:blur(24px);border:1px solid var(--border);border-radius:32px;padding:72px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;overflow:hidden}
 .cwrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,rgba(124,58,237,.15) 0%,transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(6,182,212,.12) 0%,transparent 55%);pointer-events:none}
 .cleft h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:900;line-height:1.08;margin-bottom:16px}
@@ -154,6 +150,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .clink:hover{border-color:rgba(168,85,247,.5);background:rgba(168,85,247,.08);transform:translateX(8px)}
 .cico{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--v1),var(--c1));display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff;flex-shrink:0}
 
+/* PROJECT MODAL */
 #moverlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.82);backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;padding:24px}
 #moverlay.open{display:flex}
 .mbox{background:#0d1120;border:1px solid rgba(168,85,247,.3);border-radius:24px;max-width:820px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 40px 100px rgba(0,0,0,.7)}
@@ -170,9 +167,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mbullets li{font-size:.82rem;color:var(--muted);padding-left:22px;position:relative;line-height:1.66}
 .mbullets li::before{content:'▸';position:absolute;left:0;background:linear-gradient(135deg,var(--v2),var(--c1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:.9rem}
 .mfooter{display:flex;gap:12px;flex-wrap:wrap}
+/* FIX: modal disabled button for projects without links */
+.mbtn-disabled{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 22px;font-size:.78rem;color:rgba(136,150,179,.4);cursor:not-allowed;font-weight:600;letter-spacing:.06em}
 
 footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.08em}
 footer strong{background:linear-gradient(90deg,#c4b5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
   nav{padding:16px 20px}.nlinks{gap:18px}
@@ -206,28 +209,28 @@ footer strong{background:linear-gradient(90deg,#c4b5fd,#67e8f9);-webkit-backgrou
   </ul>
 </nav>
 
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <section id="hero" class="w">
   <div class="hpill"><span class="pdot"></span> AI/ML Enthusiast</div>
   <h1 class="hname"><span class="hg">S.PADMANABHAN</span></h1>
   <p class="hsub">Building Machines That See, Think &amp; Act.</p>
-  <p class="hdesc">AI and Data Science enthusiast with hands-on experience in Machine Learning, Computer Vision, NLP, and 
-Generative AI. Skilled in building AI-powered applications, data pipelines, and ML models to solve real-world 
-problems.Passionate about building scalable AI solutions using modern AI and cloud 
-technologies. </p>
+  <p class="hdesc">AI and Data Science enthusiast with hands-on experience in Machine Learning, Computer Vision, NLP, and Generative AI. Skilled in building AI-powered applications, data pipelines, and ML models to solve real-world problems. Passionate about building scalable AI solutions using modern AI and cloud technologies.</p>
   <div class="hctas">
     <a href="#projects" class="bprimary"><i class="fas fa-eye"></i> View Projects</a>
-    <a href="certificate\Padmanabhan_DataScientist_Resume.pdf.pdf" class="bghost"><i class="certificate\Padmanabhan_DataScientist_Resume.pdf"></i> Résumé</a>
+    <!-- ✅ FIXED: correct path, download attribute, proper icon -->
+    <a href="certificate\S.Padmanabhan_AI-engineer.pdf" download class="bghost"><i class="fas fa-file-pdf"></i> Résumé</a>
   </div>
 </section>
 
 <div class="w">
   <div class="stats">
-    <div class="stat"><span class="sn">5</span><span class="sl">Projects Shipped</span></div>
-    <div class="stat"><span class="sn">1+</span><span class="sl">Years in AI / ML</span></div>
+    <div class="stat"><span class="sn">7+</span><span class="sl">Projects Shipped</span></div>
+    <div class="stat"><span class="sn">1.5</span><span class="sl">Years in AI / ML</span></div>
     <div class="stat"><span class="sn">5</span><span class="sl">Certifications</span></div>
   </div>
 </div>
 
+<!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
 <section id="experience" class="sec w">
   <span class="stag">Work Experience</span>
   <div class="elist">
@@ -235,11 +238,10 @@ technologies. </p>
       <div>
         <div class="ebadge"><i class="fas fa-circle" style="font-size:.45rem"></i> Full-Time · Active</div>
         <h3 class="erole">AI Data Analytics</h3>
-        <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px;font-weight:600">WAY.COM &nbsp;·&nbsp; Trivandrum</p>
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px;font-weight:600">Way.com &nbsp;·&nbsp; Trivandrum</p>
         <ul class="eduts">
           <li>Worked on data preparation and annotation pipelines for Computer Vision and Deep Learning models</li>
-          <li>Supported ML model training, validation, and performance evaluation in collaboration with AI 
-engineers.</li>
+          <li>Supported ML model training, validation, and performance evaluation in collaboration with AI engineers.</li>
           <li>Assisted in building datasets for model optimization and accuracy improvement.</li>
           <li>Contributed to AI model deployment workflows for internal demos and production testing.</li>
         </ul>
@@ -249,13 +251,13 @@ engineers.</li>
     </div>
     <div class="ecard reveal">
       <div>
-        <div class="ebadge" style="background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.38);color:#67e8f9"><i class="fas fa-circle" style="font-size:.45rem"></i>Internship</div>
-        <h3 class="erole">Junior AI-Engineer  Intern</h3>
-        <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px;font-weight:600">6 Month</p>
+        <div class="ebadge" style="background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.38);color:#67e8f9"><i class="fas fa-circle" style="font-size:.45rem"></i> Internship</div>
+        <h3 class="erole">Junior AI-Engineer Intern</h3>
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px;font-weight:600">WAY.COM &nbsp;·&nbsp; Trivandrum</p>
         <ul class="eduts">
-          <li>Collected and curated large-scale image datasets to support computer vision detection models, ensuring data diversity and quality for model training.</li>
-          <li>Performed image annotation and labeling using LabelMe, accurately marking objects and regions to create structured datasets for supervised learning tasks.</li>
-          <li>Assisted in preparing and organizing annotated datasets for model development and evaluation, contributing to improved performance of computer vision detection systems.</li>
+          <li>Collected and curated large-scale image datasets to support computer vision detection models.</li>
+          <li>Performed image annotation and labeling using LabelMe for supervised learning tasks.</li>
+          <li>Assisted in preparing annotated datasets contributing to improved computer vision model performance.</li>
         </ul>
         <div class="etags"><span class="et">Labelme</span><span class="et">Kaggle</span><span class="et">Numpy</span><span class="et">Json</span></div>
       </div>
@@ -264,120 +266,357 @@ engineers.</li>
   </div>
 </section>
 
+<!-- ═══════════════════════════ PROJECTS ═══════════════════════════
+     HOW LINKS WORK:
+     - Each card's onclick opens the detail MODAL (not a new page)
+     - The small GitHub icon (fab fa-github) and external-link icon at the bottom
+       of each card call event.stopPropagation() so they DON'T trigger the modal
+     - Cards with no real GitHub/demo link use class="pl-disabled" (greyed out, no href)
+     - Cards with real links use class="pl" + target="_blank" to open in a new tab
+═══════════════════════════════════════════════════════════════════ -->
 <section id="projects" class="sec w">
   <span class="stag">Selected Work</span>
   <h2 class="stitle">Things I've <span>Shipped.</span></h2>
   <div class="pgrid">
-    <div class="pcard reveal" onclick="openM('cv','AI Image Caption & Tag Generator','Computer Vision · Generator','Multimodal AI Image Understanding System that automatically generates captions, tags, and category labels from an uploaded image.\n\nUses BLIP (Bootstrapped Language-Image Pretraining) from Hugging Face Transformers to analyze visual content and produce meaningful text descriptions, keyword tags, and category classifications through a clean Streamlit interface.',['BLIP Vision-Language Model for accurate image captioning','Automatic keyword tag extraction from visual content','Category label classification for uploaded images','Built with Hugging Face Transformers pipeline','Interactive Streamlit UI for easy image upload and results'],'https://github.com/Bharath152/Ai-image-caption-generator','https://ai-image-caption-generator-blip.streamlit.app/')">
-      <div class="pthumb">
-  <img src="project/blip image.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
-  <div class="ptover"></div>
-  <span class="pttag">Computer Vision</span>
-</div>
-      <div class="pbody"><p class="pcat">Vision Language Model </p><h3 class="ptitle">AI Image Caption & Tag Generator</h3><p class="pdesc">Multimodal AI Image Understanding System that automatically generates captions, tags, and category labels from an uploaded image.</p>
-      <div class="pfoot"><div class="pstack"><span class="sb">BLIP</span><span class="sb">Streamlit</span><span class="sb">Hugging Face Transformers</span><span class="sb">Vision-Language Models</span></div><div class="plinks"><a href="https://github.com/Bharath152/Ai-image-caption-generator" class="pl" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="https://ai-interview-coach-oezptirujkg8fct2hmdupj.streamlit.app/" class="pl" onclick="event.stopPropagation()" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div></div>
+
+
+ <!-- PROJECT 1: IntelliDocs – RAG Document Q&A -->
+<div class="pcard reveal" onclick="openM(
+    'intellidocs',
+    'IntelliDocs – RAG Document Q&A',
+    'Generative AI · RAG',
+    'Built an end-to-end Retrieval-Augmented Generation (RAG) application that enables users to upload PDF documents and ask natural language questions. The system retrieves the most relevant document sections using vector search and generates context-aware answers with a Large Language Model.\n\nImplemented using LangChain, FAISS, Groq LLM, and Streamlit, providing fast, explainable, and document-grounded responses while minimizing AI hallucinations.',
+    ['Upload and query PDF documents using natural language',
+     'Document chunking and vector embeddings with FAISS',
+     'Context-aware answer generation using Groq LLM',
+     'Built Retrieval-Augmented Generation (RAG) pipeline with LangChain',
+     'Interactive Streamlit interface for real-time document Q&A'],
+    'https://github.com/Bharath152/RAG_Document_Q-A_Intellidocs',
+    'https://ragdocumentq-intellidoc.streamlit.app/')">
+
+    <div class="pthumb">
+        <img src="project\rag_docs.png"
+             style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+        <div class="ptover"></div>
+        <span class="pttag">GENERATIVE AI</span>
+    </div>
+
+    <div class="pbody">
+        <p class="pcat">Generative AI · RAG</p>
+
+        <h3 class="ptitle">IntelliDocs – RAG Document Q&A</h3>
+
+        <p class="pdesc">
+            AI-powered document assistant that enables users to upload PDF documents and receive accurate, context-aware answers using LangChain, FAISS, Groq LLM, and Streamlit.
+        </p>
+
+        <div class="pfoot">
+            <div class="pstack">
+                <span class="sb">Python</span>
+                <span class="sb">LangChain</span>
+                <span class="sb">FAISS</span>
+                <span class="sb">Groq API</span>
+                <span class="sb">Streamlit</span>
+            </div>
+        <div class="plinks">
+            <!-- ✅ FIXED: target="_blank" so it opens in a new tab, not same page -->
+            <a href="https://github.com/Bharath152/RAG_Document_Q-A_Intellidocs" class="pl" onclick="event.stopPropagation()" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://ragdocumentq-intellidoc.streamlit.app/" class="pl" onclick="event.stopPropagation()" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 
 
+    <!-- PROJECT 2: AI Image Caption — HAS real GitHub + Streamlit links -->
+    <div class="pcard reveal" onclick="openM('cv',
+        'AI Image Caption & Tag Generator',
+        'Computer Vision · Generator',
+        'Multimodal AI Image Understanding System that automatically generates captions, tags, and category labels from an uploaded image.\n\nUses BLIP (Bootstrapped Language-Image Pretraining) from Hugging Face Transformers to analyze visual content and produce meaningful text descriptions, keyword tags, and category classifications through a clean Streamlit interface.',
+        ['BLIP Vision-Language Model for accurate image captioning',
+         'Automatic keyword tag extraction from visual content',
+         'Category label classification for uploaded images',
+         'Built with Hugging Face Transformers pipeline',
+         'Interactive Streamlit UI for easy image upload and results'],
+        'https://github.com/Bharath152/Ai-image-caption-generator',
+        'https://ai-image-caption-generator-blip.streamlit.app/')">
+      <div class="pthumb">
+        <img src="project/blip image.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
+        <div class="ptover"></div>
+        <span class="pttag">Computer Vision</span>
+      </div>
+      <div class="pbody">
+        <p class="pcat">Vision Language Model</p>
+        <h3 class="ptitle">AI Image Caption & Tag Generator</h3>
+        <p class="pdesc">Multimodal AI system that auto-generates captions, tags, and category labels from any uploaded image using BLIP.</p>
+        <div class="pfoot">
+          <div class="pstack"><span class="sb">BLIP</span><span class="sb">Streamlit</span><span class="sb">HuggingFace</span></div>
+          <div class="plinks">
+            <!-- ✅ FIXED: target="_blank" so it opens in a new tab, not same page -->
+            <a href="https://github.com/Bharath152/Ai-image-caption-generator" class="pl" onclick="event.stopPropagation()" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://ai-image-caption-generator-blip.streamlit.app/" class="pl" onclick="event.stopPropagation()" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="pcard reveal" onclick="openM('llm','AI Interview Coach','LLM · Gemini · Interview AI','AI Interview Coach is an intelligent interview preparation tool designed to simulate real interview scenarios and provide automated evaluation.\n\nThe system generates role-specific interview questions in both descriptive and MCQ formats. It leverages Google Gemini 2.5 Flash for dynamic question generation and AI-driven response analysis, combining rule-based scoring for MCQs with LLM-based qualitative feedback for descriptive answers. Built with Streamlit and deployed on Streamlit Community Cloud.',['Google Gemini 2.5 Flash for dynamic question generation','Role-specific descriptive and MCQ question formats','Hybrid evaluation: rule-based scoring + LLM qualitative feedback','Prompt engineering and session state management','Secure API integration · Deployed on Streamlit Community Cloud'],'https://github.com/Bharath152/AI-Interview-Coach','https://ai-interview-coach-oezptirujkg8fct2hmdupj.streamlit.app/')">
+    <!-- PROJECT 3: AI Interview Coach — HAS real GitHub + Streamlit links -->
+    <div class="pcard reveal" onclick="openM('llm',
+        'AI Interview Coach',
+        'LLM · Gemini · Interview AI',
+        'AI Interview Coach is an intelligent interview preparation tool designed to simulate real interview scenarios and provide automated evaluation.\n\nThe system generates role-specific interview questions in both descriptive and MCQ formats. It leverages Google Gemini 2.5 Flash for dynamic question generation and AI-driven response analysis, combining rule-based scoring for MCQs with LLM-based qualitative feedback for descriptive answers. Built with Streamlit and deployed on Streamlit Community Cloud.',
+        ['Google Gemini 2.5 Flash for dynamic question generation',
+         'Role-specific descriptive and MCQ question formats',
+         'Hybrid evaluation: rule-based scoring + LLM qualitative feedback',
+         'Prompt engineering and session state management',
+         'Deployed on Streamlit Community Cloud'],
+        'https://github.com/Bharath152/AI-Interview-Coach',
+        'https://ai-interview-coach-oezptirujkg8fct2hmdupj.streamlit.app/')">
+      <div class="pthumb">
+        <img src="project/ai-interview.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
+        <div class="ptover"></div>
+        <span class="pttag">LLM Chatpot</span>
+      </div>
+      <div class="pbody">
+        <p class="pcat">LLM · Gemini 2.5 Flash</p>
+        <h3 class="ptitle">AI Interview Coach</h3>
+        <p class="pdesc">Generates role-specific questions, evaluates responses with hybrid AI scoring, and delivers personalised feedback using Google Gemini 2.5 Flash.</p>
+        <div class="pfoot">
+          <div class="pstack"><span class="sb">Gemini 2.5</span><span class="sb">Streamlit</span><span class="sb">Python</span></div>
+          <div class="plinks">
+            <a href="https://github.com/Bharath152/AI-Interview-Coach" class="pl" onclick="event.stopPropagation()" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://ai-interview-coach-oezptirujkg8fct2hmdupj.streamlit.app/" class="pl" onclick="event.stopPropagation()" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- PROJECT 4: Telecom Customer Churn Prediction -->
+<div class="pcard reveal" onclick="openM('churn',
+    'Telecom Customer Churn Prediction',
+    'Machine Learning · Classification',
+    'End-to-end machine learning project that predicts customer churn using telecom customer data. Built a complete ML pipeline including data preprocessing, SMOTE for class imbalance handling, model comparison, and SHAP-based explainability to identify key churn drivers.\n\nCompared Random Forest, XGBoost, and LightGBM models using ROC-AUC and F1 Score. The final model provides interpretable predictions to help businesses identify customers at high risk of churn.',
+    ['Performed data preprocessing and feature engineering',
+     'Handled class imbalance using SMOTE',
+     'Compared Random Forest, XGBoost, and LightGBM models',
+     'Evaluated using ROC-AUC, F1 Score, Classification Report, and Confusion Matrix',
+     'Applied SHAP to explain model predictions and feature importance'],
+    'https://github.com/Bharath152/Teleco_customer-churn_prediction',
+    null)">
   <div class="pthumb">
-    <img src="project/ai-interview.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+    <img src="project/churn.webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
     <div class="ptover"></div>
-    <span class="pttag">LIVE DEMO</span>
+    <span class="pttag">MACHINE LEARNING</span>
   </div>
-  <div class="pbody"><p class="pcat">LLM · Gemini 2.5 Flash</p><h3 class="ptitle">AI Interview Coach</h3><p class="pdesc">Intelligent interview preparation tool that generates role-specific questions, evaluates responses with hybrid AI scoring, and delivers personalized feedback using Google Gemini 2.5 Flash.</p>
-  <div class="pfoot"><div class="pstack"><span class="sb">Gemini 2.5 Flash</span><span class="sb">Streamlit</span><span class="sb">Python</span><span class="sb">Google Gen-AI</span></div><div class="plinks"><a href="https://github.com/Bharath152/AI-Interview-Coach" class="pl" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="https://ai-interview-coach-oezptirujkg8fct2hmdupj.streamlit.app/" class="pl" onclick="event.stopPropagation()" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div></div>
+
+  <div class="pbody">
+    <p class="pcat">Machine Learning · Classification</p>
+    <h3 class="ptitle">Telecom Customer Churn Prediction</h3>
+    <p class="pdesc">Machine learning pipeline for predicting customer churn using SMOTE, XGBoost, LightGBM, Random Forest, and SHAP explainability.</p>
+
+    <div class="pfoot">
+      <div class="pstack">
+        <span class="sb">Python</span>
+        <span class="sb">Scikit-learn</span>
+        <span class="sb">XGBoost</span>
+        <span class="sb">SHAP</span>
+      </div>
+
+      <div class="plinks">
+        <a href="https://github.com/Bharath152/Teleco_customer-churn_prediction"
+           class="pl"
+           onclick="event.stopPropagation()"
+           target="_blank"
+           title="GitHub Repository">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <span class="pl-disabled" title="No live demo available">
+          <i class="fas fa-external-link-alt"></i>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-<div class="pcard reveal" onclick="openM('retail','IBM HR Analytics Dashboard','Data Analytics · Power BI','Interactive HR analytics dashboard built on IBM employee data, providing deep insights into workforce distribution, income, travel patterns, and job satisfaction.\n\nVisualizes 1,058 employees with 7M total income across departments. Features gender-based job satisfaction analysis, business travel distribution by job role, and department-wise employee breakdown with interactive filters.',['1,058 employees and 7M salary data visualized','Business travel patterns across 9 job roles','Department-wise employee distribution with filters','Gender-based job satisfaction donut charts','Interactive employee detail table with education and department'],'https://github.com/Bharath152','#')">
+ <!-- PROJECT 5: Satellite Image Classification -->
+<div class="pcard reveal" onclick="openM('satellite',
+    'Satellite Image Classification',
+    'Deep Learning · Computer Vision',
+    'Developed a deep learning-based satellite image classification system capable of identifying different land-cover categories from aerial imagery. The model was trained on satellite images belonging to Cloudy, Desert, Green Area, and Water classes.\n\nBuilt using Convolutional Neural Networks (CNNs), the project demonstrates image preprocessing, feature extraction, model training, and performance evaluation for remote sensing applications. The system can assist in environmental monitoring, land-use analysis, and geographical region classification.',
+    ['Classified satellite images into Cloudy, Desert, Green Area, and Water categories',
+     'Implemented image preprocessing and data augmentation techniques',
+     'Built and trained a Convolutional Neural Network (CNN)',
+     'Evaluated performance using Accuracy, Precision, Recall, and Confusion Matrix',
+     'Demonstrated applications in remote sensing and land-cover analysis'],
+    'https://github.com/Bharath152/Satelite-image-classification_Deeplearning',
+    null)">
+
   <div class="pthumb">
-    <img src="project/ibm.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+    <img src="project/satelite.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
     <div class="ptover"></div>
-    <span class="pttag">POWER BI</span>
+    <span class="pttag">DEEP LEARNING</span>
   </div>
-  <div class="pbody"><p class="pcat">Data Analytics · Power BI</p><h3 class="ptitle">IBM HR Analytics Dashboard</h3><p class="pdesc">Interactive Power BI dashboard analyzing 1,058 IBM employees across departments, visualizing income, gender distribution, job satisfaction, and business travel patterns.</p>
-  <div class="pfoot"><div class="pstack"><span class="sb">Power BI</span><span class="sb">DAX</span><span class="sb">HR Analytics</span><span class="sb">Data Visualization</span></div><div class="plinks"><a href="#" class="pl" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="#" class="pl" onclick="event.stopPropagation()" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div></div>
-</div>
-   
 
-<div class="pcard reveal" onclick="openM('ocr','Covid-19 Global Analysis Dashboard','Data Analytics · Power BI','Comprehensive global COVID-19 analysis dashboard tracking pandemic spread across continents with 607M new cases, 89.69K new deaths, and 99.80K total cases.\n\nVisualizes total deaths and new cases by continent using bar charts and pie charts. Includes median age analysis by location, year-wise case trends for 2020-2021, and multi-country comparative breakdowns with interactive continent filters.',['607M new cases and 89.69K deaths tracked globally','Total death and new case breakdown by continent','Country-level analysis with median age correlation','Year-wise trend comparison: 2020 vs 2021','Interactive continent and location filters'],'https://github.com/Bharath152','#')">
+  <div class="pbody">
+    <p class="pcat">Deep Learning · Computer Vision</p>
+
+    <h3 class="ptitle">Satellite Image Classification</h3>
+
+    <p class="pdesc">
+      Deep learning system that classifies satellite imagery into Cloudy, Desert, Green Area, and Water categories using CNN-based image recognition.
+    </p>
+
+    <div class="pfoot">
+      <div class="pstack">
+        <span class="sb">Python</span>
+        <span class="sb">TensorFlow</span>
+        <span class="sb">CNN</span>
+        <span class="sb">OpenCV</span>
+      </div>
+
+      <div class="plinks">
+        <a href="https://github.com/Bharath152/YOUR_SATELLITE_REPO"
+           class="pl"
+           onclick="event.stopPropagation()"
+           target="_blank"
+           title="GitHub Repository">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <span class="pl-disabled" title="No live demo available">
+          <i class="fas fa-external-link-alt"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PROJECT 6: Face Mask Detection & Classification -->
+<div class="pcard reveal" onclick="openM('mask',
+    'Face Mask Detection & Classification',
+    'Deep Learning · Computer Vision',
+    'Built a deep learning-based face mask classification system capable of determining whether a person is wearing a face mask or not from facial images. The project leverages Transfer Learning with MobileNetV2 to achieve high accuracy while maintaining computational efficiency.\n\nThe model was trained on images categorized into With Mask and Without Mask classes and is suitable for real-time monitoring applications, smart surveillance systems, and public safety solutions.',
+    ['Classified facial images into With Mask and Without Mask categories',
+     'Implemented Transfer Learning using MobileNetV2',
+     'Applied image preprocessing and data augmentation techniques',
+     'Evaluated model performance using Accuracy, Precision, Recall, and Confusion Matrix',
+     'Optimized for real-time and resource-efficient deployment'],
+    'https://github.com/Bharath152/Face-mask-detection_Deeplearning',
+    null)">
+
   <div class="pthumb">
-    <img src="project/covid.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+    <img src="project/face_mask.jpg" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
     <div class="ptover"></div>
-    <span class="pttag">POWER BI</span>
+    <span class="pttag">COMPUTER VISION</span>
   </div>
-  <div class="pbody"><p class="pcat">Data Analytics · Power BI</p><h3 class="ptitle">Covid-19 Global Analysis Dashboard</h3><p class="pdesc">Power BI dashboard tracking 607M global COVID-19 cases with continent-wise death analysis, country-level breakdowns, and year-wise trend comparisons for 2020–2021.</p>
-  <div class="pfoot"><div class="pstack"><span class="sb">Power BI</span><span class="sb">DAX</span><span class="sb">COVID-19 Data</span><span class="sb">Data Visualization</span></div><div class="plinks"><a href="#" class="pl" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="#" class="pl" onclick="event.stopPropagation()" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div></div>
+
+  <div class="pbody">
+    <p class="pcat">Deep Learning · Computer Vision</p>
+
+    <h3 class="ptitle">Face Mask Detection & Classification</h3>
+
+    <p class="pdesc">
+      Transfer learning-based computer vision system that detects whether a person is wearing a face mask using MobileNetV2.
+    </p>
+
+    <div class="pfoot">
+      <div class="pstack">
+        <span class="sb">Python</span>
+        <span class="sb">MobileNetV2</span>
+        <span class="sb">TensorFlow</span>
+        <span class="sb">OpenCV</span>
+      </div>
+
+      <div class="plinks">
+        <a href="https://github.com/Bharath152/YOUR_FACE_MASK_REPO"
+           class="pl"
+           onclick="event.stopPropagation()"
+           target="_blank"
+           title="GitHub Repository">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <span class="pl-disabled" title="No live demo available">
+          <i class="fas fa-external-link-alt"></i>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 
+   <!-- PROJECT 7: IPL Dashboard — Power BI, no public live link yet -->
+    <div class="pcard reveal" onclick="openM('pose',
+        'IPL Cricket Match Dashboard',
+        'Data Analytics · Power BI',
+        'Interactive IPL cricket analytics dashboard covering 636 matches from 2008 to 2017 with timeline filtering and team-wise performance breakdowns.\n\nHighlights top batsmen by total runs, man of the match leaders, most toss-winning and match-winning teams, venue-wise match distribution across 25+ stadiums, and season-wise match count with dynamic team filters.',
+        ['636 IPL matches analyzed from 2008 to 2017',
+         'Top 10 batsmen ranked by total runs scored',
+         'Most toss-winning and match-winning team analysis',
+         'Match distribution across 25+ IPL venues',
+         'Season-wise breakdown with timeline slicer and team filter'],
+        'https://github.com/Bharath152/POWER-BI',
+        null)">
+      <div class="pthumb">
+        <img src="project/ipl.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"/>
+        <div class="ptover"></div>
+        <span class="pttag">POWER BI</span>
+      </div>
+      <div class="pbody">
+        <p class="pcat">Data Analytics · Power BI</p>
+        <h3 class="ptitle">IPL Cricket Match Dashboard</h3>
+        <p class="pdesc">Analyzes 636 IPL matches from 2008–2017 — top batsmen, winning teams, venue statistics, and season trends with interactive filters.</p>
+        <div class="pfoot">
+          <div class="pstack"><span class="sb">Power BI</span><span class="sb">Excel</span><span class="sb">Sports Analytics</span></div>
+          <div class="plinks">
+            <a href="https://github.com/Bharath152/POWER-BI" class="pl" onclick="event.stopPropagation()" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+            <span class="pl-disabled" title="No live demo for Power BI projects"><i class="fas fa-external-link-alt"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-  
-<div class="pcard reveal" onclick="openM('pose','IPL Cricket Match Dashboard','Data Analytics · Power BI','Interactive IPL cricket analytics dashboard covering 636 matches from 2008 to 2017 with timeline filtering and team-wise performance breakdowns.\n\nHighlights top batsmen by total runs, man of the match leaders, most toss-winning and match-winning teams, venue-wise match distribution across 25+ stadiums, and season-wise match count from 2010 to 2013 with dynamic team filters.',['636 IPL matches analyzed from 2008 to 2017','Top 10 batsmen ranked by total runs scored','Most toss-winning and match-winning team analysis','Match distribution across 25+ IPL venues','Season-wise breakdown with timeline slicer and team filter'],'https://github.com/Bharath152','#')">
-  <div class="pthumb">
-    <img src="project/ipl.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
-    <div class="ptover"></div>
-    <span class="pttag">POWER BI</span>
   </div>
-  <div class="pbody"><p class="pcat">Data Analytics · Power BI</p><h3 class="ptitle">IPL Cricket Match Dashboard</h3><p class="pdesc">Power BI dashboard analyzing 636 IPL matches from 2008–2017, covering top batsmen, winning teams, venue statistics, and season trends with interactive filters.</p>
-  <div class="pfoot"><div class="pstack"><span class="sb">Power BI</span><span class="sb">DAX</span><span class="sb">Sports Analytics</span><span class="sb">Data Visualization</span></div><div class="plinks"><a href="#" class="pl" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a><a href="#" class="pl" onclick="event.stopPropagation()" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div></div>
-</div>
-
-
-
-
-
-
-
 </section>
 
+<!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
 <section id="skills" class="sec w">
   <span class="stag">Technical Arsenal</span>
   <h2 class="stitle">What I <span>Work With.</span></h2>
   <div class="sgrid">
     <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">👁️</div><span style="background:linear-gradient(90deg,#c4b5fd,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Computer Vision</span></div><div class="chips"><span class="chip">YOLO</span><span class="chip">VGG-16</span><span class="chip">OpenCV</span><span class="chip">MobileNet</span><span class="chip">BLIP</span><span class="chip">EasyOCR</span><span class="chip">Segment Anything</span><span class="chip">Mask R-CNN</span></div></div>
     <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">🧠</div><span style="background:linear-gradient(90deg,#67e8f9,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Deep Learning / ML</span></div><div class="chips"><span class="chip">PyTorch</span><span class="chip">HuggingFace</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Classification</span><span class="chip">Regression</span><span class="chip">Clustering</span></div></div>
-    <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#059669,#10b981)">💬</div><span style="background:linear-gradient(90deg,#6ee7b7,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent">LLM & Generative AI</span></div><div class="chips"><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Claude API</span><span class="chip">OpenAI API</span><span class="chip">Prompt Engineering</span><span class="chip">Agents</span></div></div>
+    <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#059669,#10b981)">💬</div><span style="background:linear-gradient(90deg,#6ee7b7,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent">LLM & Generative AI</span></div><div class="chips"><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">Claude API</span><span class="chip">OpenAI API</span><span class="chip">Prompt Engineering</span><span class="chip">Faiss</span></div></div>
     <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#b45309,#f59e0b)">⚙️</div><span style="background:linear-gradient(90deg,#fcd34d,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent">MLOps & Deployment</span></div><div class="chips"><span class="chip">FastAPI</span><span class="chip">AWS S3</span><span class="chip">GitHub</span><span class="chip">Streamlit</span><span class="chip">Streamlit Cloud</span></div></div>
     <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#be185d,#f43f5e)">💻</div><span style="background:linear-gradient(90deg,#fda4af,#fb7185);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Languages & Data</span></div><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Power BI</span><span class="chip">Jupyter Notebook</span></div></div>
     <div class="sgroup reveal"><div class="sghead"><div class="sgico" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6)">🏷️</div><span style="background:linear-gradient(90deg,#93c5fd,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Data & Annotation</span></div><div class="chips"><span class="chip">LabelMe</span><span class="chip">Label Studio</span><span class="chip">Roboflow</span><span class="chip">COCO Format</span><span class="chip">Data Augmentation</span></div></div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     CERTIFICATIONS — PERMANENT FILE PATHS
-     
-     HOW TO USE:
-     1. Create a folder called "certificates" next to portfolio.html
-     2. Save your images as cert1.jpg, cert2.jpg ... cert6.jpg inside it
-     3. Update the title, platform, year, description text below
-     ══════════════════════════════════════════ -->
+<!-- ═══════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
 <section id="certifications" class="sec w">
   <span class="stag">Certifications</span>
   <h2 class="stitle">Courses & <span>Certificates.</span></h2>
   <div class="certgrid">
 
-    <!-- CERTIFICATE 1 — replace cert1.jpg with your file name -->
     <div class="certcard reveal">
-      <div class="certimg-wrap" onclick="openCert('certificates/cert1.jpg')">
-        <img src="certificate\UC-f32490b6-9b61-4c64-ad02-7fa007a728eb.jpg" alt="Certificate 1" class="certimg"
-             onerror="this.parentElement.innerHTML='<div class=certimg-missing><span style=font-size:2.5rem>📄</span><span>Save your certificate as<br><strong>cert1.jpg</strong><br>inside the certificates/ folder</span></div>'"/>
+      <!-- ✅ FIXED: openCertFromImg reads the actual img src, so it always shows the right image -->
+      <div class="certimg-wrap" onclick="openCertFromImg(this)">
+        <img src="certificate/UC-f32490b6-9b61-4c64-ad02-7fa007a728eb.jpg" alt="Certificate" class="certimg"/>
         <div class="certimg-hover"><i class="fas fa-expand"></i> &nbsp;View Full</div>
       </div>
       <div class="certbody">
         <div class="certbadge">🎓 Completed</div>
-        <h4 class="certtitle">Python for Computer vision with deep learning and open cv</h4>
+        <h4 class="certtitle">Python for Computer Vision with Deep Learning and OpenCV</h4>
         <p class="certmeta">Udemy &nbsp;·&nbsp; 2025</p>
       </div>
     </div>
 
-    <!-- CERTIFICATE 2 -->
     <div class="certcard reveal">
-      <div class="certimg-wrap" onclick="openCert('certificates/cert2.jpg')">
-        <img src="certificate/PG Diploma Datascience.jpg" alt="Certificate 2" class="certimg"
-             onerror="this.parentElement.innerHTML='<div class=certimg-missing><span style=font-size:2.5rem>📄</span><span>Save your certificate as<br><strong>cert2.jpg</strong><br>inside the certificates/ folder</span></div>'"/>
+      <div class="certimg-wrap" onclick="openCertFromImg(this)">
+        <img src="certificate/PG Diploma Datascience.jpg" alt="Certificate" class="certimg"/>
         <div class="certimg-hover"><i class="fas fa-expand"></i> &nbsp;View Full</div>
       </div>
       <div class="certbody">
@@ -387,25 +626,21 @@ engineers.</li>
       </div>
     </div>
 
-    <!-- CERTIFICATE 3 -->
     <div class="certcard reveal">
-      <div class="certimg-wrap" onclick="openCert('certificates/cert3.jpg')">
-        <img src="certificate/Blockchain certificate.jpg" alt="Certificate 3" class="certimg"
-             onerror="this.parentElement.innerHTML='<div class=certimg-missing><span style=font-size:2.5rem>📄</span><span>Save your certificate as<br><strong>cert3.jpg</strong><br>inside the certificates/ folder</span></div>'"/>
+      <div class="certimg-wrap" onclick="openCertFromImg(this)">
+        <img src="certificate/Blockchain certificate.jpg" alt="Certificate" class="certimg"/>
         <div class="certimg-hover"><i class="fas fa-expand"></i> &nbsp;View Full</div>
       </div>
       <div class="certbody">
         <div class="certbadge">🎓 Completed</div>
         <h4 class="certtitle">Blockchain Associate</h4>
-        <p class="certmeta">Kerala Block chain Academy &nbsp;·&nbsp; 2023</p>
+        <p class="certmeta">Kerala Blockchain Academy &nbsp;·&nbsp; 2023</p>
       </div>
     </div>
 
-    <!-- CERTIFICATE 4 -->
     <div class="certcard reveal">
-      <div class="certimg-wrap" onclick="openCert('certificates/cert4.jpg')">
-        <img src="certificate/Cdit_python.jpg" alt="Certificate 4" class="certimg"
-             onerror="this.parentElement.innerHTML='<div class=certimg-missing><span style=font-size:2.5rem>📄</span><span>Save your certificate as<br><strong>cert4.jpg</strong><br>inside the certificates/ folder</span></div>'"/>
+      <div class="certimg-wrap" onclick="openCertFromImg(this)">
+        <img src="certificate/Cdit_python.jpg" alt="Certificate" class="certimg"/>
         <div class="certimg-hover"><i class="fas fa-expand"></i> &nbsp;View Full</div>
       </div>
       <div class="certbody">
@@ -415,11 +650,9 @@ engineers.</li>
       </div>
     </div>
 
-    <!-- CERTIFICATE 5 -->
     <div class="certcard reveal">
-      <div class="certimg-wrap" onclick="openCert('certificates/cert5.jpg')">
-        <img src="certificate/cyberia_python.jpg" alt="Certificate 5" class="certimg"
-             onerror="this.parentElement.innerHTML='<div class=certimg-missing><span style=font-size:2.5rem>📄</span><span>Save your certificate as<br><strong>cert5.jpg</strong><br>inside the certificates/ folder</span></div>'"/>
+      <div class="certimg-wrap" onclick="openCertFromImg(this)">
+        <img src="certificate/cyberia_python.jpg" alt="Certificate" class="certimg"/>
         <div class="certimg-hover"><i class="fas fa-expand"></i> &nbsp;View Full</div>
       </div>
       <div class="certbody">
@@ -434,46 +667,64 @@ engineers.</li>
 
 <!-- LIGHTBOX -->
 <div id="certlightbox" onclick="closeCert()">
-  <img id="certlightbox-img"/>
-  <button class="lb-close" onclick="closeCert()">×</button>
+  <img id="certlightbox-img" src="" alt="Certificate"/>
+  <button class="lb-close" onclick="event.stopPropagation();closeCert()">×</button>
 </div>
 
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
 <section id="contact" class="sec w">
   <span class="stag">Get In Touch</span>
   <h2 class="stitle">Let's <span>Connect.</span></h2>
   <div class="cwrap">
     <div class="cleft">
       <h2>Ready to Build<br/><span>Something Real?</span></h2>
-      <p style="margin-top:16px">Exploring opportunities in Artificial Intelligence, Computer Vision, and Large Language Models,and collaborative research. Always open to innovative ideas and meaningful collaborations..</p>
+      <p style="margin-top:16px">Exploring opportunities in Artificial Intelligence, Computer Vision, and Large Language Models. Always open to innovative ideas and meaningful collaborations.</p>
       <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-        <a href="https://mail.google.com/mail/?view=cm&to=bharathpadmanabhan2@gmail.com" target="_blank" class="bprimary"><i class="fas fa-paper-plane"></i> Email Me</a>
-        <a href="#" class="bghost"><i class="certificate\Padmanabhan_DataScientist_Resume.pdf.pdf"></i> Download CV</a>
+        <!-- ✅ FIXED: standard mailto: works everywhere -->
+        <a href="mailto:bharathpadmanabhan2@gmail.com" class="bprimary"><i class="fas fa-paper-plane"></i> Email Me</a>
+        <!-- ✅ FIXED: correct path + download attribute + proper icon -->
+        <a href="certificate\S.Padmanabhan_AI-engineer.pdf" download class="bghost"><i class="fas fa-download"></i> Download CV</a>
       </div>
     </div>
     <div class="clinks">
-      <a href="https://mail.google.com/mail/?view=cm&to=bharathpadmanabhan2@gmail.com" target="_blank" class="clink"><div class="cico"><i class="fas fa-envelope"></i></div><div><div style="font-weight:700">Email</div><div style="color:var(--muted);font-size:.75rem"><span class="__cf_email__" data-cfemail="1e7c767f6c7f6a766e7f7a737f707f7c767f702c5e79737f7772307d7173">[email&#160;protected]</span></div></div></a>
-      <a href="https://www.linkedin.com/in/s-padmanabhan-baa6242b3"  target="_blank" class="clink"><div class="cico" style="background:linear-gradient(135deg,#0077b5,#00a0dc)"><i class="fab fa-linkedin"></i></div><div><div style="font-weight:700">LinkedIn</div><div style="color:var(--muted);font-size:.75rem">Click here</div></div></a>
-      <a href="https://github.com/Bharath152" target="_blank" class="clink"><div class="cico" style="background:linear-gradient(135deg,#24292e,#444d56)"><i class="fab fa-github"></i></div><div><div style="font-weight:700">GitHub</div><div style="color:var(--muted);font-size:.75rem">Click here</div></div></a>
+      <a href="mailto:bharathpadmanabhan2@gmail.com" class="clink">
+        <div class="cico"><i class="fas fa-envelope"></i></div>
+        <div><div style="font-weight:700">Email</div><div style="color:var(--muted);font-size:.75rem">bharathpadmanabhan2@gmail.com</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/s-padmanabhan-baa6242b3" target="_blank" class="clink">
+        <div class="cico" style="background:linear-gradient(135deg,#0077b5,#00a0dc)"><i class="fab fa-linkedin"></i></div>
+        <div><div style="font-weight:700">LinkedIn</div><div style="color:var(--muted);font-size:.75rem">s-padmanabhan</div></div>
+      </a>
+      <a href="https://github.com/Bharath152" target="_blank" class="clink">
+        <div class="cico" style="background:linear-gradient(135deg,#24292e,#444d56)"><i class="fab fa-github"></i></div>
+        <div><div style="font-weight:700">GitHub</div><div style="color:var(--muted);font-size:.75rem">Bharath152</div></div>
+      </a>
     </div>
   </div>
 </section>
 
 <footer><div class="w"><p>Designed & built by <strong>S.Padmanabhan</strong> · AI Engineer · <span>© 2026</span></p></div></footer>
 
+<!-- ═══════════════════════════ PROJECT MODAL ═══════════════════════════ -->
 <div id="moverlay" onclick="closeM(event)">
   <div class="mbox">
-    <div class="mhead"><div><p class="mcat" id="mcat"></p><h2 class="mtitle" id="mtitle"></h2></div><button class="mclose" onclick="forceClose()">×</button></div>
+    <div class="mhead">
+      <div><p class="mcat" id="mcat"></p><h2 class="mtitle" id="mtitle"></h2></div>
+      <button class="mclose" onclick="forceClose()">×</button>
+    </div>
     <div class="mbody">
       <div class="mthumb" id="mthumb"></div>
-      <span class="mstag">Overview</span><p class="mdesc" id="mdesc"></p>
-      <span class="mstag">Technical Highlights</span><ul class="mbullets" id="mbullets"></ul>
+      <span class="mstag">Overview</span>
+      <p class="mdesc" id="mdesc"></p>
+      <span class="mstag">Technical Highlights</span>
+      <ul class="mbullets" id="mbullets"></ul>
       <div class="mfooter" id="mfooter"></div>
     </div>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* STARS */
+<script>
+/* ── STARS ── */
 (function(){
   var c=document.getElementById('stars'),ctx=c.getContext('2d'),W,H,S=[];
   function resize(){W=c.width=innerWidth;H=c.height=innerHeight;}
@@ -483,78 +734,119 @@ engineers.</li>
   window.addEventListener('resize',function(){resize();init();});
 })();
 
-/* CURSOR */
+/* ── CURSOR ── */
 var cur=document.getElementById('cur'),cur2=document.getElementById('cur2'),mx=0,my=0,tx=0,ty=0;
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';});
 (function loop(){tx+=(mx-tx)*.1;ty+=(my-ty)*.1;cur2.style.transform='translate('+(tx-22)+'px,'+(ty-22)+'px)';requestAnimationFrame(loop);})();
 
-/* SCROLL PROGRESS */
+/* ── SCROLL PROGRESS ── */
 window.addEventListener('scroll',function(){var s=document.documentElement;document.getElementById('prog').style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';});
 
-/* 3D TILT */
+/* ── 3D TILT on project cards ── */
 document.querySelectorAll('.pcard').forEach(function(c){
-  c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+(x*16)+'deg) rotateX('+(-y*12)+'deg) translateZ(12px)';c.style.boxShadow=(-x*28)+'px '+(y*28)+'px 56px rgba(124,58,237,.22)';});
-  c.addEventListener('mouseleave',function(){c.style.transform='perspective(900px) rotateY(0) rotateX(0) translateZ(0)';c.style.boxShadow='none';});
+  c.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform='perspective(900px) rotateY('+(x*16)+'deg) rotateX('+(-y*12)+'deg) translateZ(12px)';
+    c.style.boxShadow=(-x*28)+'px '+(y*28)+'px 56px rgba(124,58,237,.22)';
+  });
+  c.addEventListener('mouseleave',function(){
+    c.style.transform='perspective(900px) rotateY(0) rotateX(0) translateZ(0)';
+    c.style.boxShadow='none';
+  });
 });
 
-/* SCROLL REVEAL */
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*75);obs.unobserve(e.target);}});},{threshold:.05,rootMargin:'0px 0px -40px 0px'});
+/* ── SCROLL REVEAL ── */
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in');},i*75);obs.unobserve(e.target);}
+  });
+},{threshold:.05,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-// Fallback: ensure any .reveal already in viewport on load gets shown
-setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight){el.classList.add('in');}});},200);
+setTimeout(function(){
+  document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('in');
+  });
+},200);
 
-/* PROJECT MODAL */
-var thumbBgs={cv:'linear-gradient(135deg,#1e0a3c,#0a2240)',retail:'linear-gradient(135deg,#0a2a20,#061822)',rag:'linear-gradient(135deg,#1a0a3c,#1a0020)',ocr:'linear-gradient(135deg,#0f2010,#081a18)',pose:'linear-gradient(135deg,#1a1000,#120818)',llm:'linear-gradient(135deg,#100a28,#0a1a2a)'};
-var emojis={cv:'🔬',retail:'🏪',rag:'⚖️',ocr:'📄',pose:'🏃',llm:'🤖'};
-var thumbImgs={
+/* ── PROJECT MODAL ──
+   thumbImgs maps the type key to the project thumbnail image path.
+   Pass null as the demo argument when there's no live demo link. */
+var thumbImgs = {
+  intellidocs:'project/rag_docs.png',
   cv:'project/blip image.png',
   llm:'project/ai-interview.png',
-  retail:'project/ibm.png',
-  ocr:'project/covid.png',
+  churn:'project/churn.webp',
+  satellite:'project/satelite.png',
+  mask:'project/face_mask.jpg',
   pose:'project/ipl.png'
 };
+var thumbBgs = {
+  intellidocs:'linear-gradient(135deg,#1e0a3c,#0a2240)',
+  cv:'linear-gradient(135deg,#1e0a3c,#0a2240)',
+  llm:'linear-gradient(135deg,#100a28,#0a1a2a)',
+  churn:'linear-gradient(135deg,#0a2a20,#061822)',
+  pose:'linear-gradient(135deg,#1a1000,#120818)'
+};
+
+var emojis={cv:'🔬',retail:'🏪',ocr:'📄',pose:'🏃',llm:'🤖'};
+
 function openM(type,title,cat,desc,bullets,gh,demo){
   document.getElementById('mcat').textContent=cat;
   document.getElementById('mtitle').textContent=title;
   document.getElementById('mdesc').textContent=desc;
+
   var t=document.getElementById('mthumb');
   if(thumbImgs[type]){
     t.style.background='#0d1120';
-    t.innerHTML='<img src="'+thumbImgs[type]+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />';
+    t.innerHTML='<img src="'+thumbImgs[type]+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;"/>';
   } else {
     t.style.background=thumbBgs[type]||'#0d1120';
     t.textContent=emojis[type]||'🤖';
   }
+
   document.getElementById('mbullets').innerHTML=bullets.map(function(b){return '<li>'+b+'</li>';}).join('');
-  document.getElementById('mfooter').innerHTML='<a href="'+gh+'" class="bghost" style="font-size:.78rem;padding:10px 22px" target="_blank"><i class="fab fa-github"></i> Source Code</a>'+(demo?'<a href="'+demo+'" class="bprimary" style="font-size:.78rem;padding:10px 22px" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>':'');
+
+  // ✅ FIXED: GitHub always links to profile/repo (opens new tab)
+  // Demo button only shown when a real demo URL is provided (not null)
+  var footer='<a href="'+gh+'" class="bghost" style="font-size:.78rem;padding:10px 22px" target="_blank"><i class="fab fa-github"></i> Source Code</a>';
+  if(demo){
+    footer+='<a href="'+demo+'" class="bprimary" style="font-size:.78rem;padding:10px 22px" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>';
+  } else {
+    footer+='<span class="mbtn-disabled"><i class="fas fa-external-link-alt"></i> No Live Demo</span>';
+  }
+  document.getElementById('mfooter').innerHTML=footer;
+
   document.getElementById('moverlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
+
 function closeM(e){if(e.target.id==='moverlay')forceClose();}
 function forceClose(){document.getElementById('moverlay').classList.remove('open');document.body.style.overflow='';}
 
-/* CERTIFICATE LIGHTBOX */
-function openCert(src){
-  document.getElementById('certlightbox-img').src=src;
-  document.getElementById('certlightbox').style.display='flex';
+/* ── CERTIFICATE LIGHTBOX ──
+   Reads the img.src from the clicked wrapper — never uses a hardcoded path. */
+function openCertFromImg(wrapper){
+  var img=wrapper.querySelector('img.certimg');
+  if(!img||img.naturalWidth===0)return; // image didn't load, nothing to show
+  document.getElementById('certlightbox-img').src=img.src;
+  document.getElementById('certlightbox').classList.add('open');
   document.body.style.overflow='hidden';
 }
 function closeCert(){
-  document.getElementById('certlightbox').style.display='none';
+  document.getElementById('certlightbox').classList.remove('open');
   document.body.style.overflow='';
 }
 
-/* ESC KEY */
+/* ── ESC KEY closes any open overlay ── */
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){forceClose();closeCert();}});
 
-/* NAV ACTIVE */
+/* ── NAV ACTIVE highlight on scroll ── */
 window.addEventListener('scroll',function(){
   document.querySelectorAll('section[id]').forEach(function(s){
     var t=s.getBoundingClientRect().top;
     if(t<120&&t>-s.offsetHeight){
       document.querySelectorAll('.nlinks a').forEach(function(a){
-        var active=(a.getAttribute('href')==='#'+s.id);
-        a.classList.toggle('active',active);
+        a.classList.toggle('active',(a.getAttribute('href')==='#'+s.id));
       });
     }
   });
